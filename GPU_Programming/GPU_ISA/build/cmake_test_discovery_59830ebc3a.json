@@ -1,0 +1,28 @@
+{
+  "tests": 2,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "Conformance",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "PartialWarpDoesNotWrite",
+          "file": "\/Users\/charanshankar\/Desktop\/C++_Modelling\/GPU_Programming\/GPU_ISA\/tests\/test_conformance.cpp",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "name": "Random",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "VADD_MatchesReference",
+          "file": "\/Users\/charanshankar\/Desktop\/C++_Modelling\/GPU_Programming\/GPU_ISA\/tests\/test_random.cpp",
+          "line": 13
+        }
+      ]
+    }
+  ]
+}

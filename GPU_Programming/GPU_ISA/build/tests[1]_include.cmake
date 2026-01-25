@@ -1,0 +1,5 @@
+if(EXISTS "/Users/charanshankar/Desktop/C++_Modelling/GPU_Programming/GPU_ISA/build/tests[1]_tests.cmake")
+  include("/Users/charanshankar/Desktop/C++_Modelling/GPU_Programming/GPU_ISA/build/tests[1]_tests.cmake")
+else()
+  add_test(tests_NOT_BUILT tests_NOT_BUILT)
+endif()

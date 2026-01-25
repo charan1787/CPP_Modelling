@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgpu_model.a CMakeFiles/gpu_model.dir/src/model.cpp.o
+/usr/bin/ranlib libgpu_model.a
