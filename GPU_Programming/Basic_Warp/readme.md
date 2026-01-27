@@ -66,7 +66,7 @@ total capacity (warp in total × total cycles) in denominator
 
 Build : 
 ```
-g++ -std=c++17 -O2 -Wall -Wextra divergence_demo.cpp -o divergence_demo
+g++ -std=c++17 -O2 -Wall -Wextra Basic_warp_exec_simulation.cpp -o divergence_demo
 ```
 
 Run : 

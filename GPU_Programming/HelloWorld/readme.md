@@ -67,7 +67,7 @@ This loop models :
 
 Build : 
 ```
-g++ -std=c++17 -O2 -Wall -Wextra simt_demo.cpp -o simt_demo
+g++ -std=c++17 -O2 -Wall -Wextra hello_world.cpp -o simt_demo
 ```
 Run : 
 ```
