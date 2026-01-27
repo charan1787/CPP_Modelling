@@ -1,4 +1,4 @@
-Bit Utils — 32-bit Bit Manipulation Library (C++)
+# Bit Utils — 32-bit Bit Manipulation Library (C++)
 
 A lightweight C++ module that provides common 32-bit bit-manipulation primitives used in low-level systems work, simulation/emulation, binary encoding/decoding, and performance-critical code paths.
 
@@ -22,14 +22,16 @@ This project includes :
 
 Features : 
 
-    Bit-field extraction: get_bits(x, hi, lo)
-    Bit-field modification: set_bits(x, hi, lo, value)
-    Bit rotations (32-bit): rotl32, rotr32 (handles n >= 32 via modulo)
-    Sign extension from n-bit encoded values: sign_extend(x, nbits)
-    Uses fixed-width integer types (uint32_t, int32_t) for portability and correctness
+    Bit-field extraction:                       get_bits(x, hi, lo)
+    Bit-field modification:                     set_bits(x, hi, lo, value)
+    Bit rotations (32-bit):                     rotl32, rotr32 (handles n >= 32 via modulo)
+    Sign extension from n-bit encoded values:   sign_extend(x, nbits)
+
+*Uses fixed-width integer types (uint32_t, int32_t) for portability and correctness* 
 
 
 Project Structure : 
+
 Typical layout:
 
     .
