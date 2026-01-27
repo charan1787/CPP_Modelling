@@ -52,16 +52,18 @@ A lightweight C++ module that provides common 32-bit bit-manipulation primitives
 
 ## Build and Run : 
 
-Prerequisites :
+### Prerequisites :
 
     C++17 compatible compiler
     macOS: clang++
     Linux: g++
 
 Build Command : 
-    clang++ -std=c++17 bit_utils.cpp main.cpp -o bit_utils_demo
+
+     clang++ -std=c++17 bit_utils.cpp main.cpp -o bit_utils_demo
 
 Run Command : 
+
     ./bit_utils_demo
 
 January 5th 2026
