@@ -2,6 +2,9 @@
 
 A lightweight C++ module that provides common 32-bit bit-manipulation primitives used in low-level systems work, simulation/emulation, binary encoding/decoding, and performance-critical code paths.
 
+
+
+
 Bit primitives like these show up in:
 
     instruction decoding (CPU/GPU ISA work)
