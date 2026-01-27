@@ -1,6 +1,6 @@
 # Warp Simulation (C++) — SIMT Divergence + Reconvergence Model
 
-A small, self-contained C++ program that simulates warp-level SIMT execution with per-lane predicate masks, divergent branches, and reconvergence. It provides a simple metric called lane utilization to measure the throughput impact of divergence.
+A small C++ program that simulates warp-level SIMT execution with per-lane predicate masks, divergent branches, and reconvergence. It provides a simple metric called lane utilization to measure the throughput impact of divergence.
 
 The goal is to build correct intuition for how warps execute control flow and why divergence reduces effective throughput.
 
