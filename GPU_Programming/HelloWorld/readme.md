@@ -30,11 +30,11 @@ It serves as a stepping stone before moving to :
 
 * SIMT behavior :
 
-* * One instruction
+  * One instruction
 
-* * Executed across all lanes
+  * Executed across all lanes
 
-* * Each lane operates on its own data
+  * Each lane operates on its own data
 
 In real GPUs, this happens in hardware.
 
@@ -49,9 +49,11 @@ Here, it is modeled using a simple loop and an array.
 
 * data[lane] represents lane-local registers / memory
 
-        for (int lane = 0; lane < Lanes; lane++) {
-            data[lane] = lane * 2;
-        }
+''''c++
+for (int lane = 0; lane < Lanes; lane++) {
+    data[lane] = lane * 2;
+}
+''''
 
 This loop models :
 
