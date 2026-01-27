@@ -10,17 +10,17 @@ On a SIMT GPU, a warp (typically 32 threads) executes a single instruction strea
 
 If threads in a warp take different control paths (e.g., half go into if, half into else), the warp often must execute both paths serially while masking inactive lanes.
 
-### This demo compares:
+### This demo compares :
 
-* No divergence: all lanes take the same path
+* No divergence : all lanes take the same path
 
-* With divergence: lanes split between a true-path and false-path
+* With divergence : lanes split between a true-path and false-path
 
-### It prints:
+### It prints :
 
 * total cycles (rough estimate)
 
-* * (how much of the warp’s capacity is used)
+ * util - how much of the warp’s capacity is used
 
 ## Model assumptions
 
@@ -30,22 +30,22 @@ If threads in a warp take different control paths (e.g., half go into if, half i
 
 * Work sections :
 
- * pre work (all lanes active)
+  * pre work (all lanes active)
 
- * true_case work (only true lanes active)
+  * true_case work (only true lanes active)
 
- * false_case work (only false lanes active)
+  * false_case work (only false lanes active)
 
- * post work (all lanes active)
+  * post work (all lanes active)
 
-### Cycle model
+### Cycle model :
 
 No divergence cycles :
 ```
 pre + true_case + post
 ```
 
-Divergence cycles:
+Divergence cycles :
 ```
 pre + true_case + false_case + post
 (true and false paths executed serially)
@@ -58,11 +58,11 @@ Utilization is computed as :
 util = [(pre+post)⋅warp+true_case⋅true_lanes+false_case⋅false_lanes​] / 
 [warp⋅cycles_div]
 ```
-“active lane-cycles” in numerator
+active lane-cycles in numerator
 
 total capacity (warp in total × total cycles) in denominator
 
-## Build and Run : 
+## Build and Run  
 
 Build : 
 ```
@@ -76,8 +76,8 @@ Run :
 
 ## Example output : 
 ```
-No divergence cycles: 20  util: 1
-Divergence cycles:    30  util: 0.666667
+No divergence cycles : 20  util : 1
+Divergence cycles :    30  util : 0.666667
 ```
 
 ## Interpretation:
@@ -85,6 +85,8 @@ Divergence cycles:    30  util: 0.666667
 * Divergence increases total cycles because both branches execute.
 
 * Utilization drops because some lanes are inactive during each masked branch.
+
+January 23 2026
 
 <!--
 
