@@ -1,0 +1,9 @@
+.vscode/
+
+# Ignoring all executable files
+*
+!*.cpp
+!*.h
+!*.hpp
+!Makefile
+!CMakeLists.txt
