@@ -47,5 +47,25 @@ Expected Inputs / Constraints :
 - For `sign_extend`:
   - `1 <= nbits <= 32`
 
-These preconditions are enforced with `assert` in debug builds.
+*These preconditions are enforced with `assert` in debug builds.*
+
+Build and Run : 
+
+Prerequisites :
+
+    C++17 compatible compiler
+    macOS: clang++
+    Linux: g++
+
+Build Command : 
+    clang++ -std=c++17 bit_utils.cpp main.cpp -o bit_utils_demo
+
+Run Command : 
+    ./bit_utils_demo
+
+January 5th 2026
+
+    
+
+
 
