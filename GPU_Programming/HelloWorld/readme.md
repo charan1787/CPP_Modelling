@@ -49,11 +49,11 @@ Here, it is modeled using a simple loop and an array.
 
 * data[lane] represents lane-local registers / memory
 
-''''c++
+'''
 for (int lane = 0; lane < Lanes; lane++) {
     data[lane] = lane * 2;
 }
-''''
+'''
 
 This loop models :
 
