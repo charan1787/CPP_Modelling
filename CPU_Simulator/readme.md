@@ -53,7 +53,7 @@ Outputs:
 
 Supported instructions:
 
-------------------------------------------------------
+
 | Instruction         | Meaning                      |
 | ------------------- | ---------------------------- |
 | `ADDI rd, rs1, imm` | `R[rd] = R[rs1] + imm`       |
@@ -65,7 +65,6 @@ Supported instructions:
 | `SHL rd, rs1, imm`  | logical left shift by `imm`  |
 | `SHR rd, rs1, imm`  | logical right shift by `imm` |
 | `HALT`              | stop execution               |
-------------------------------------------------------
 
 ### Instruction format (Instr) : 
 
@@ -81,15 +80,15 @@ Supported instructions:
 
 Each CPU::tick() advances the simulator by one micro-phase :
 
-1. FETCH1: MAR = PC
+1. FETCH1 : MAR = PC
 
-2. FETCH2: MDR = mem[MAR] (bounds checked)
+2. FETCH2 : MDR = mem[MAR] (bounds checked)
 
-3. FETCH3: IR = MDR; PC++
+3. FETCH3 : IR = MDR; PC++
 
-4. DECODE: print decoded instruction (trace)
+4. DECODE : print decoded instruction (trace)
 
-5. EXECUTE: drive ALU inputs, call alu.step(...), write back to registers
+5. EXECUTE : drive ALU inputs, call alu.step(...), write back to registers
 
 This split is useful for :
 
@@ -123,15 +122,17 @@ main.cpp loads and runs the following program:
 
 * HALT
 
-    std::vector<Instr> program = {
-        {IOp::ADDI, 1, 0, 0, 10},
-        {IOp::ADDI, 2, 0, 0, 20},
-        {IOp::ADD,  3, 1, 2, 0},
-        {IOp::SHL,  4, 3, 0, 1},
-        {IOp::HALT, 0, 0, 0, 0}
-    };
 
-### Expected final state:
+  std::vector<Instr> program = {
+     {IOp::ADDI, 1, 0, 0, 10},
+     {IOp::ADDI, 2, 0, 0, 20},
+     {IOp::ADD,  3, 1, 2, 0},
+     {IOp::SHL,  4, 3, 0, 1},
+     {IOp::HALT, 0, 0, 0, 0}
+  };
+
+
+### Expected final state :
 
 R3 = 30
 
@@ -144,7 +145,7 @@ Enable full CPU trace :
     CPU cpu;
     cpu.trace = true;
 
-Trace output includes:
+Trace output includes :
 
 * phase name + PC
 
