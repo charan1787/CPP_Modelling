@@ -58,11 +58,11 @@ A lightweight C++ module that provides common 32-bit bit-manipulation primitives
     macOS: clang++
     Linux: g++
 
-Build Command : 
+### Build Command : 
 
      clang++ -std=c++17 bit_utils.cpp main.cpp -o bit_utils_demo
 
-Run Command : 
+### Run Command : 
 
     ./bit_utils_demo
 
