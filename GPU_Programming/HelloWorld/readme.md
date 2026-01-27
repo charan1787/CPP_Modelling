@@ -41,10 +41,10 @@ In real GPUs, this happens in hardware.
 Here, it is modeled using a simple loop and an array.
 
 ## Code Overview 
-
-        constexpr int Lanes = 32;
-        std::array<int, Lanes> data;
-
+```
+constexpr int Lanes = 32;
+std::array<int, Lanes> data;
+```
 * Lanes represents the warp width (32 threads)
 
 * data[lane] represents lane-local registers / memory
@@ -66,21 +66,21 @@ This loop models :
 ## Build & Run
 
 Build : 
-
-        g++ -std=c++17 -O2 -Wall -Wextra simt_demo.cpp -o simt_demo
-
+```
+g++ -std=c++17 -O2 -Wall -Wextra simt_demo.cpp -o simt_demo
+```
 Run : 
-
-        ./simt_demo
-
+```
+./simt_demo
+```
 ## Example output 
-
-        Hello from lane 0, value 0
-        Hello from lane 1, value 2
-        Hello from lane 2, value 4
-        ...
-        Hello from lane 31, value 62
-
+```
+Hello from lane 0, value 0
+Hello from lane 1, value 2
+Hello from lane 2, value 4
+...
+Hello from lane 31, value 62
+```
 *Each line corresponds to one lane executing the same instruction.*
 
 ## Note : 
