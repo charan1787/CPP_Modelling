@@ -5,25 +5,25 @@ A lightweight C++ module that provides common 32-bit bit-manipulation primitives
 
 
 
-Bit primitives like these show up in:
+## Bit primitives like these show up in:
 
     instruction decoding (CPU/GPU ISA work)
     packed numeric formats and bitfields (SIMD-friendly layouts)
     hashing / checksums / crypto-style transforms (rotations)
     quant tooling that parses binary market feeds or compressed data formats
 
-This repo demonstrates correctness-first handling of common pitfalls such as:
+## This repo demonstrates correctness-first handling of common pitfalls such as:
 
     avoiding invalid shifts (e.g., 1u << 32)
     using fixed-width integer types for stable semantics
 
 
-This project includes :
+## This project includes :
 
     A small utility library (bit_utils.h/.cpp)
     A simple executable demo/test (main.cpp) showing correct usage and expected outputs
 
-Features : 
+## Features : 
 
     Bit-field extraction:                       get_bits(x, hi, lo)
     Bit-field modification:                     set_bits(x, hi, lo, value)
@@ -33,9 +33,7 @@ Features :
 *Uses fixed-width integer types (uint32_t, int32_t) for portability and correctness* 
 
 
-Project Structure : 
-
-Typical layout:
+## Project Structure : 
 
     .
     ├── bit_utils.h
@@ -43,7 +41,7 @@ Typical layout:
     └── main.cpp
 
 
-Expected Inputs / Constraints : 
+## Expected Inputs / Constraints : 
 
 - For `get_bits` and `set_bits`:
   - `0 <= lo <= hi < 32`
@@ -52,7 +50,7 @@ Expected Inputs / Constraints :
 
 *These preconditions are enforced with `assert` in debug builds.*
 
-Build and Run : 
+## Build and Run : 
 
 Prerequisites :
 
