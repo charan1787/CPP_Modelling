@@ -122,13 +122,13 @@ main.cpp loads and runs the following program:
 
 * HALT
 
-    std::vector<Instr> program = {
-        {IOp::ADDI, 1, 0, 0, 10},
-        {IOp::ADDI, 2, 0, 0, 20},
-        {IOp::ADD,  3, 1, 2, 0},
-        {IOp::SHL,  4, 3, 0, 1},
-        {IOp::HALT, 0, 0, 0, 0}
-    };
+     std::vector<Instr> program = {
+         {IOp::ADDI, 1, 0, 0, 10},
+         {IOp::ADDI, 2, 0, 0, 20},
+         {IOp::ADD,  3, 1, 2, 0},
+         {IOp::SHL,  4, 3, 0, 1},
+         {IOp::HALT, 0, 0, 0, 0}
+     };
 
 
 ### Expected final state :
