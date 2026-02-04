@@ -5,10 +5,10 @@
 using namespace std;
 
 int main() {
-    uint32_t N = 64;
+    uint32_t N = 64; // No.of threads
 
     Buffer mem;
-    mem.buf0.resize(N);
+    mem.buf0.resize(N); // as each thread has its own memory it is of size N
     mem.buf1.resize(N);
     mem.buf2.resize(N, 0);
 
@@ -29,9 +29,9 @@ int main() {
     GPU_Sim sim;
     sim.run(prog, mem, N);
 
-    cout << "i  buf0  buf1  buf2(min)\n";
-    for (int i = 0; i < 10; i++) {
-        cout << i << "   " << mem.buf0[i]
+    cout << "T-ID  buf0  buf1  buf2(min)\n";
+    for (uint32_t i = 0; i < N; i++) {
+        cout << " " << i << "     " << mem.buf0[i]
              << "    " << mem.buf1[i]
              << "     " << mem.buf2[i] << "\n";
     }

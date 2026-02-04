@@ -20,8 +20,8 @@ int main(){
     // utilisation = (total pre work + total post work + total true false work) / ( warps + total cycles)
     // total pre or post work = respenctive cycles * threads working 
 
-    std::cout << "No divergence cycles: " << cycles_no_div << "  util: " << util_no_div << "\n";
-    std::cout << "Divergence cycles:    " << cycles_div    << "  util: " << util_div    << "\n";
+    std::cout << "No divergence cycles : " << cycles_no_div << " --- "<<"Utilisation : " << util_no_div << "\n";
+    std::cout << "Divergence cycles    : " << cycles_div    << " --- "<<"Utilisation : " << util_div    << "\n";
 
 
 

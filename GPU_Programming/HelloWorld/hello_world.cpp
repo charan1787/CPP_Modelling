@@ -11,7 +11,7 @@ int main(){
 
     for(int lane = 0;lane < Lanes;lane++){
         data[lane] = lane * 2; // one instruction applied to all lanes
-        std::cout<< "Hello from lane" << lane << ", value " << data[lane] << std::endl;
+        std::cout<< "Hello from lane " << lane << ", value " << data[lane] << std::endl;
 
     }
 

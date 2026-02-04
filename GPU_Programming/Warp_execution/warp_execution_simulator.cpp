@@ -50,6 +50,7 @@ static void exec_add1(WarpState& w, SimResult& r, int reps) {
         r.active_lane_cycles += (uint64_t)active_lanes;
 
         // Only active lanes do the work
+        // similar to hello world program
         for (int lane = 0; lane < WARP_SIZE; lane++) {
             if (w.active[lane]) {
                 w.x[lane] += 1;
