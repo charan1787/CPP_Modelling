@@ -98,7 +98,7 @@ GPU_SIMT_Warp_Execution_Simulator/
 ├── compute_scaling.png
 ├── memory_scaling.png
 └── README.md
-```css
+```
 
 ## Simulator Architecture
 
