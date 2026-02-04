@@ -79,7 +79,7 @@ Performance impact of :
 | HALT   | Stop warp execution     |
 
 ## Project Structure 
-'''
+```css
 GPU_SIMT_Warp_Execution_Simulator/
 ├── src/
 │   ├── isa.h        
@@ -98,7 +98,7 @@ GPU_SIMT_Warp_Execution_Simulator/
 ├── compute_scaling.png
 ├── memory_scaling.png
 └── README.md
-'''
+```css
 
 ## Simulator Architecture
 
@@ -189,17 +189,19 @@ All warps are triggered their step functions until thy are halted.
 
 
 ### Compile
-'''C++
+```C++
 g++ -std=c++17 -O2 -Wall src/model.cpp app/main.cpp -I src -o gpu_sim
-'''
+```
 
 
 ### Run
-'''C++
+```C++
 ./gpu_sim
-'''
+```
 
 ### Analysis
-'''C++
+```C++
 python3 analysis/analysis.py
-'''
+```
+
+4th, February 2026
