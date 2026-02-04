@@ -19,18 +19,28 @@ The focus of this project is architectural understanding and correctness.
 * Support for:
 
 -> Uniform and divergent branches
+
 -> Nested divergence
+
 -> Memory-heavy workloads
+
 -> Compute-heavy workloads
+
 
 * Detailed performance metrics:
 
 -> Warp cycles (units of time taken for the program)
+
 -> Active lane cycles
+
 -> Warp utilization % 
+
 -> Memory lane operations counter
+
 -> Divergent branches and reconvergence counters
+
 -> CSV-based output and Python visualization of graphs
+
 
 
 ## GPU Concepts Modeled
