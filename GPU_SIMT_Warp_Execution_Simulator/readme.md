@@ -19,25 +19,17 @@ The focus of this project is architectural understanding and correctness.
 * Support for:
 
 * * Uniform and divergent branches
-
 * * Nested divergence
-
 * * Memory-heavy workloads
-
 * * Compute-heavy workloads
 
 * Detailed performance metrics:
 
 * * Warp cycles (units of time taken for the program)
-
 * * Active lane cycles
-
 * * Warp utilization % 
-
 * * Memory lane operations counter
-
 * * Divergent branches and reconvergence counters
-
 * * CSV-based output and Python visualization of graphs
 
 
@@ -115,13 +107,9 @@ The simulator is built using 4 point approach.
 * Each warp maintains:
 
 * * Per-lane registers
-
 * * Predicate flags
-
 * * Active mask
-
 * * Program counter
-
 * * SIMT reconvergence stack
 
 * Buffers
